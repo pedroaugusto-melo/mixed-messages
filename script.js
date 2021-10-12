@@ -9,3 +9,34 @@ const messages = ['Success is not final, failure is not fatal: it is the courage
 'The best way to get started is to quit talking and begin doing. WALT DISNEY', 
 'We generate fears while we sit. We overcome them by action. DR HENRY LINK'];
 
+let randomMessageParts = [];
+
+const selectRandomMessages = () => {
+    do{
+        randomMessageParts = [];
+
+        for(let i = 0; i< 3; i++){
+            randomMessageParts.push(messages[Math.floor(10 * Math.random())]);
+        }
+    } while(isRepeatedMessages(randomMessageParts));
+};
+
+const isRepeatedMessages = inputMessage => {
+    let isRepeated = false;
+
+    for(let i = 0; i< inputMessage.length && isRepeated === false; i++){
+        for(let j = 0; j < inputMessage.length && isRepeated === false; j++){
+            if(i == j) j++;
+            if(inputMessage[i] == inputMessage[j]) isRepeated = true;
+        }
+    }
+
+    return isRepeated;
+};
+
+selectRandomMessages();
+
+const randomMessage = randomMessageParts.join('\n');
+
+console.log("You random message is: \n")
+console.log(randomMessage);
