@@ -1,12 +1,12 @@
 # Mixed Messages
 
-A JavaScript program thats randomly creates a message and displays it to the user.
+A JavaScript program that randomly creates a message and displays it to the user.
 
 ## Table of contents
-- [General info] (#general-info)
-- [Objective] (#objective)
-- [Technologies] (#technologies)
-- [Setup] (#setup)
+- [General info](#general-info)
+- [Objective](#objective)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
 ## General info
 
